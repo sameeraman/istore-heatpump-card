@@ -1,0 +1,37 @@
+# Heat Pump Dashboard Floorplan Configuration
+# Update the following paths to match your setup
+  image: /local/custom-lovelace/heatpump-card/istore-270-M.svg?v=5
+  stylesheet: /local/custom-lovelace/heatpump-card/heatpumpstylesheet.css
+
+# Update the following sensors to match your setup
+  rules:
+    - entity: sensor.istore_suction_temperature
+      state_action:
+        - service: floorplan.text_set
+          service_data: 
+            element: suction_temp
+            text: '${entity.state ? entity.state + " °C" : "Unknown"}'
+    - entity: sensor.istore_coil_temperature
+      state_action:
+        - service: floorplan.text_set
+          service_data: 
+            element: coil_temp
+            text: '${entity.state ? entity.state + " °C" : "Unknown"}'
+    - entity: sensor.istore_top_temperature
+      state_action:
+        - service: floorplan.text_set
+          service_data: 
+            element: top_temp
+            text: '${entity.state ? entity.state + " °C" : "Unknown"}'
+    - entity: sensor.istore_ambient_temperature
+      state_action:
+        - service: floorplan.text_set
+          service_data: 
+            element: ambient_temp
+            text: '${entity.state ? entity.state + " °C" : "Unknown"}'
+    - entity: sensor.istore_bottom_temperature
+      state_action:
+        - service: floorplan.text_set
+          service_data: 
+            element: bottom_temp
+            text: '${entity.state ? entity.state + " °C" : "Unknown"}'
