@@ -45,6 +45,11 @@ This is **not required** — you only need to update the mappings in `heatpumpda
 - Currently works only in **dark mode**. Font colors and styling may not display correctly in light mode.
 - There is no inbuilt power measuring sensor in the iStore. If you want power monitoring, you need to install a separate power metering socket. 
 
+## Final Dashboard Look
+![final dashboard](images/dashboard-final.png)
+
+This is how my dashboard looks like at the end. I have included some history graphs For temperature sensors and also I have included a power monitoring plug for the heat pump to monitor the power consumption. 
+
 ## References
 
 - [ha-floorplan: How to handle size and expand](https://experiencelovelace.github.io/ha-floorplan/docs/how-to-handle-size-and-expand-floorplan/)
